@@ -1,0 +1,242 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Grade Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1> Student Grade Manager</h1>
+        <p>Manage student marks, grades and performance</p>
+    </header>
+
+    <main>
+
+        <!-- Student Form -->
+        <section class="form-section">
+
+            <h2>Add Student</h2>
+
+            <form id="studentForm">
+
+                <div class="form-group">
+                    <label for="studentName">
+                        Student Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter student name"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="rollNumber">
+                        Roll Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="rollNumber"
+                        placeholder="Enter roll number"
+                    >
+                </div>
+
+
+                <div class="marks-grid">
+
+                    <div class="form-group">
+                        <label for="maths">
+                            Mathematics
+                        </label>
+
+                        <input
+                            type="number"
+                            id="maths"
+                            min="0"
+                            max="100"
+                            placeholder="0 - 100"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="science">
+                            Science
+                        </label>
+
+                        <input
+                            type="number"
+                            id="science"
+                            min="0"
+                            max="100"
+                            placeholder="0 - 100"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="english">
+                            English
+                        </label>
+
+                        <input
+                            type="number"
+                            id="english"
+                            min="0"
+                            max="100"
+                            placeholder="0 - 100"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="computer">
+                            Computer
+                        </label>
+
+                        <input
+                            type="number"
+                            id="computer"
+                            min="0"
+                            max="100"
+                            placeholder="0 - 100"
+                        >
+                    </div>
+
+                </div>
+
+
+                <button type="submit" id="submitBtn">
+                    Add Student
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="statistics">
+
+            <div class="stat-card">
+                <h3>Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Class Average</h3>
+                <p id="classAverage">0%</p>
+            </div>
+
+        </section>
+
+
+        <!-- Search and Filter -->
+        <section class="controls">
+
+            <div>
+                <label for="searchInput">
+                    Search Student
+                </label>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by name or roll number"
+                >
+            </div>
+
+
+            <div>
+                <label for="gradeFilter">
+                    Filter by Grade
+                </label>
+
+                <select id="gradeFilter">
+
+                    <option value="all">
+                        All Grades
+                    </option>
+
+                    <option value="A">
+                        Grade A
+                    </option>
+
+                    <option value="B">
+                        Grade B
+                    </option>
+
+                    <option value="C">
+                        Grade C
+                    </option>
+
+                    <option value="D">
+                        Grade D
+                    </option>
+
+                    <option value="F">
+                        Grade F
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- Student List -->
+        <section class="student-section">
+
+            <h2>Student Records</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Name</th>
+                            <th>Roll No.</th>
+                            <th>Percentage</th>
+                            <th>Grade</th>
+                            <th>Result</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="studentTableBody">
+                        
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p id="emptyMessage">
+                No students added yet.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
